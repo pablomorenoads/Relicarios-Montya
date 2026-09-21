@@ -6,27 +6,6 @@
   <meta name="description" content="Los mejores relicarios personalizados de Colombia. Acero inoxidable y grabado láser.">
   <title>Relicarios Personalizados | MONTYA</title>
 
-  <!-- Facebook Domain Verification -->
-  <meta name="facebook-domain-verification" content="hyzyr4e4hi0hj45hnkh7didpy47zq4" />
-  
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1086221527223203');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1086221527223203&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -47,9 +26,11 @@
       background: var(--bg-light); 
       color: var(--brown); 
       line-height: 1.5; 
+      /* Fondo gris sutil en PC para que resalte el móvil en el centro */
       background-color: #f0f0f0; 
     }
 
+    /* Contenedor central simulando pantalla de celular */
     .container { 
       max-width: 480px; 
       margin: 0 auto; 
@@ -101,6 +82,7 @@
       font-size: 15px;
     }
 
+    /* Collage 2x2 estricto */
     .collage { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
@@ -116,6 +98,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
     }
 
+    /* Bloque de Oferta */
     .pricing { 
       text-align: center; 
       padding: 15px 20px; 
@@ -149,6 +132,7 @@
       text-transform: uppercase; 
     }
 
+    /* Beneficios en Viñetas */
     .features { 
       padding: 0 25px 30px; 
     }
@@ -178,32 +162,12 @@
       margin: 0; 
     }
 
-    /* Contenedor del Botón y Flechas */
+    /* Botón Flotante de WhatsApp */
     .cta-container { 
       padding: 0 20px; 
       position: sticky; 
       bottom: 20px; 
       z-index: 100; 
-    }
-
-    /* Flechas animadas hacia abajo */
-    .arrows-down {
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    
-    .arrows-down span {
-      display: inline-block;
-      color: var(--wa-green);
-      font-size: 22px;
-      font-weight: 900;
-      margin: 0 15px;
-      animation: bounce 1.2s infinite ease-in-out;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(6px); }
     }
     
     .cta-button { 
@@ -263,6 +227,7 @@
         </div>
       </div>
 
+      <!-- Collage 2x2 -->
       <div class="collage">
         <img src="foto1.jpeg" alt="Relicario interior familia">
         <img src="foto2.jpeg" alt="Relicario grabado frontal">
@@ -270,6 +235,7 @@
         <img src="foto4.jpeg" alt="Relicario mascotas">
       </div>
 
+      <!-- Anclaje de Precio -->
       <div class="pricing">
         <div class="old-price">Precio normal: $99.900</div>
         <div class="new-price">
@@ -277,6 +243,7 @@
         </div>
       </div>
 
+      <!-- Viñetas de Autoridad -->
       <div class="features">
         <div class="feature-item">
           <div class="feature-icon">🛡️</div>
@@ -311,17 +278,10 @@
         </div>
       </div>
 
+      <!-- Botón Flotante CTA -->
       <div class="cta-container">
-        
-        <!-- Flechas animadas apuntando hacia abajo -->
-        <div class="arrows-down">
-          <span>↓</span>
-          <span>↓</span>
-          <span>↓</span>
-        </div>
-
-        <!-- El evento onclick dispara el Lead en tu Píxel cuando tocan el botón -->
-        <a href="https://wa.me/573237140289?text=Hola%20Montya%20%E2%9C%A8%20Vi%20los%20relicarios%20desde%20%2454.900%20y%20quiero%20elegir%20mi%20modelo" class="cta-button" target="_blank" rel="noopener" onclick="fbq('track', 'Lead');">
+        <!-- RECUERDA CAMBIAR EL NÚMERO DE TELÉFONO AQUÍ -->
+        <a href="https://wa.me/573237140289?text=Hola%20Montya%20%E2%9C%A8%20Vi%20los%20relicarios%20desde%20%2454.900%20y%20quiero%20elegir%20mi%20modelo" class="cta-button" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
           </svg>
