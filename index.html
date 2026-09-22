@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Los mejores relicarios personalizados de Colombia. Acero inoxidable y grabado láser.">
-  <title>Relicarios Personalizados | MONTYA</title>
+  <meta name="description" content="Relicarios personalizados MONTYA Jewelry. Lleva tus recuerdos siempre contigo.">
+  <title>Relicarios Personalizados | MONTYA Jewelry</title>
 
   <!-- Facebook Domain Verification (INTACTO) -->
   <meta name="facebook-domain-verification" content="hyzyr4e4hi0hj45hnkh7didpy47zq4" />
@@ -28,41 +28,44 @@
   <!-- End Meta Pixel Code -->
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
     :root {
-      --bg-light: #fbf8f3;
+      --cream-light: #fbf8f3;
+      --cream: #f4eee6;
       --brown: #4a3f35;
       --brown-soft: #765f4e;
       --wa-green: #25D366;
       --wa-hover: #20BA5A;
-      --discount-red: #d32f2f;
+      --discount-red: #b33939;
       --border-color: #e0d5c1;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body { 
-      font-family: "Montserrat", sans-serif; 
-      background: var(--bg-light); 
+      font-family: "Montserrat", Arial, sans-serif; 
+      background: var(--cream-light); 
       color: var(--brown); 
-      line-height: 1.5; 
-      background-color: #f0f0f0; 
+      line-height: 1.6; 
+      background-color: #f0f0f0;
     }
 
+    /* Contenedor central simulando vista móvil perfecta, adaptable a desktop */
     .container { 
       max-width: 480px; 
       margin: 0 auto; 
       background: #ffffff; 
       min-height: 100vh; 
-      box-shadow: 0 0 20px rgba(0,0,0,0.1); 
-      padding-bottom: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.08); 
+      padding-bottom: 90px;
       position: relative;
     }
     
     header { 
       padding: 25px 20px 15px; 
       text-align: center; 
+      border-bottom: 1px solid var(--cream);
     }
     
     .logo-img { 
@@ -71,40 +74,49 @@
       height: auto; 
     }
 
-    .headline { 
-      text-align: center; 
-      padding: 0 20px 15px; 
-    }
-    
-    .headline h1 { 
-      font-family: "Cormorant Garamond", serif; 
-      font-size: 30px; 
-      line-height: 1.1; 
-      font-weight: 700; 
-      color: var(--brown); 
-      margin-bottom: 10px; 
-    }
-    
-    .reviews { 
-      font-size: 13px; 
-      color: var(--brown-soft); 
-      font-weight: 600; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      gap: 5px; 
-    }
-    
-    .stars { 
-      color: #FFB800; 
-      letter-spacing: 2px; 
-      font-size: 15px;
+    /* Hero Principal */
+    .hero {
+      padding: 30px 20px 20px;
+      text-align: center;
     }
 
+    .reviews-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brown-soft);
+      background: var(--cream-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stars { color: #f39c12; }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .hero p.subtitle {
+      font-size: 15px;
+      color: var(--brown-soft);
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
+
+    /* Collage de fotografías */
     .collage { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
-      gap: 8px; 
+      gap: 10px; 
       padding: 0 20px 20px; 
     }
     
@@ -112,137 +124,253 @@
       width: 100%; 
       aspect-ratio: 1/1; 
       object-fit: cover; 
-      border-radius: 8px; 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
-    }
-
-    .pricing { 
-      text-align: center; 
-      padding: 15px 20px; 
-      background: #fffaf5; 
-      border-top: 1px dashed var(--border-color); 
-      border-bottom: 1px dashed var(--border-color); 
-      margin-bottom: 25px; 
-    }
-    
-    .old-price { 
-      font-size: 14px; 
-      color: #999; 
-      text-decoration: line-through; 
-      margin-bottom: 2px; 
-    }
-    
-    .new-price { 
-      font-size: 32px; 
-      font-weight: 700; 
-      color: var(--discount-red); 
-      display: flex; 
-      align-items: baseline; 
-      justify-content: center; 
-      gap: 8px; 
-    }
-    
-    .new-price span { 
-      font-size: 16px; 
-      color: var(--brown); 
-      font-weight: 700; 
-      text-transform: uppercase; 
-    }
-
-    .features { 
-      padding: 0 25px 30px; 
-    }
-    
-    .feature-item { 
-      display: flex; 
-      align-items: flex-start; 
-      gap: 15px; 
-      margin-bottom: 16px; 
-    }
-    
-    .feature-icon { 
-      font-size: 22px; 
-      line-height: 1; 
-    }
-    
-    .feature-text strong { 
-      display: block; 
-      font-size: 15px; 
-      color: var(--brown); 
-      margin-bottom: 2px; 
-    }
-    
-    .feature-text p { 
-      font-size: 13px; 
-      color: var(--brown-soft); 
-      margin: 0; 
-    }
-
-    /* Contenedor del Botón y Flechas */
-    .cta-container { 
-      padding: 0 20px; 
-      position: sticky; 
-      bottom: 20px; 
-      z-index: 100; 
-    }
-
-    /* Flechas animadas hacia abajo */
-    .arrows-down {
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    
-    .arrows-down span {
-      display: inline-block;
-      color: var(--wa-green);
-      font-size: 22px;
-      font-weight: 900;
-      margin: 0 15px;
-      animation: bounce 1.2s infinite ease-in-out;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(6px); }
-    }
-    
-    .cta-button { 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      gap: 10px; 
-      width: 100%; 
-      background: var(--wa-green); 
-      color: #fff; 
-      text-decoration: none; 
-      padding: 18px 15px; 
       border-radius: 12px; 
-      font-weight: 700; 
-      font-size: 16px; 
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); 
-      transition: transform 0.2s, background 0.2s; 
-    }
-    
-    .cta-button:active { 
-      transform: scale(0.98); 
-      background: var(--wa-hover);
-    }
-    
-    .cta-button svg { 
-      width: 26px; 
-      height: 26px; 
-      fill: currentColor; 
+      box-shadow: 0 4px 15px rgba(74, 63, 53, 0.08); 
     }
 
-    .guarantee { 
-      text-align: center; 
-      font-size: 12px; 
-      color: var(--brown-soft); 
-      margin-top: 15px; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      gap: 5px; 
+    /* Precio Destacado */
+    .pricing-box {
+      text-align: center;
+      background: #fffaf5;
+      padding: 18px 20px;
+      margin: 0 20px 25px;
+      border-radius: 12px;
+      border: 1px dashed var(--border-color);
+    }
+
+    .pricing-label {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brown-soft);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .pricing-value {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--discount-red);
+    }
+
+    /* Botón de WhatsApp Principal */
+    .cta-main-wrap {
+      padding: 0 20px;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--wa-green);
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .cta-btn:active { transform: scale(0.98); background: var(--wa-hover); }
+    .cta-btn svg { width: 24px; height: 24px; fill: currentColor; }
+
+    .cta-subtext {
+      font-size: 12px;
+      color: var(--brown-soft);
+      margin-top: 8px;
+    }
+
+    /* Secciones de Contenido Limpias */
+    .section-block {
+      padding: 30px 20px;
+      border-top: 1px solid var(--cream);
+      text-align: center;
+    }
+
+    .section-block h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: var(--brown);
+    }
+
+    .section-block p {
+      font-size: 14px;
+      color: var(--brown-soft);
+      margin-bottom: 20px;
+    }
+
+    .single-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(74, 63, 53, 0.1);
+      margin-top: 10px;
+    }
+
+    /* Grid de Qué Incluye (Iconos) */
+    .includes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .include-card {
+      background: var(--cream-light);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .include-card span { font-size: 20px; display: block; margin-bottom: 6px; }
+    .include-card strong { font-size: 13px; display: block; color: var(--brown); margin-bottom: 2px; }
+    .include-card p { font-size: 11px; color: var(--brown-soft); margin: 0; }
+
+    /* Pasos de personalización */
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: var(--cream-light);
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .step-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--brown-soft);
+      min-width: 25px;
+    }
+
+    .step-content strong { font-size: 14px; display: block; color: var(--brown); }
+    .step-content p { font-size: 12px; margin: 0; color: var(--brown-soft); }
+
+    /* Testimonios y Confianza */
+    .testimonial-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Preguntas Frecuentes */
+    .faq-item {
+      text-align: left;
+      background: var(--cream-light);
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .faq-item strong {
+      font-size: 14px;
+      display: block;
+      color: var(--brown);
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      font-size: 12px;
+      color: var(--brown-soft);
+      margin: 0;
+    }
+
+    /* Cierre Emocional */
+    .emotional-close {
+      padding: 40px 20px;
+      text-align: center;
+      background: #fffaf5;
+      border-top: 1px solid var(--cream);
+    }
+
+    .emotional-close h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .emotional-close p {
+      font-size: 15px;
+      color: var(--brown-soft);
+      margin-bottom: 25px;
+    }
+
+    /* Barra Flotante Inferior Móvil */
+    .floating-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      padding: 12px 20px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .floating-price {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--discount-red);
+      line-height: 1;
+    }
+
+    .floating-price span {
+      display: block;
+      font-size: 10px;
+      font-family: "Montserrat", sans-serif;
+      color: var(--brown-soft);
+      text-transform: uppercase;
+    }
+
+    .floating-btn {
+      background: var(--wa-green);
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+
+    .floating-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+    footer {
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--brown-soft);
+      background: var(--cream);
     }
   </style>
 </head>
@@ -250,88 +378,200 @@
 <body>
   <div class="container">
 
+    <!-- Header / Logo -->
     <header>
-      <img src="logo.png" alt="Montya Jewelry Logo" class="logo-img">
+      <img src="logo.jpeg" alt="Montya Jewelry Logo" class="logo-img" loading="lazy">
     </header>
 
     <main>
-      <div class="headline">
-        <h1>Los mejores relicarios personalizados de Colombia</h1>
-        <div class="reviews">
-          <span class="stars">★★★★★</span>
-          +1.200 personas ya llevan sus recuerdos
+      <!-- Hero Principal -->
+      <section class="hero">
+        <div class="reviews-badge">
+          <span class="stars">★★★★★</span> Más de 1.200 clientes felices
         </div>
-      </div>
+        <h1>Lleva contigo a quien más amas, siempre. ❤️</h1>
+        <p class="subtitle">Relicarios personalizados con tus fotos, nombres, fechas o mensajes especiales.</p>
+      </section>
 
+      <!-- Collage de Fotografías -->
       <div class="collage">
-        <img src="foto1.jpeg" alt="Relicario interior familia">
-        <img src="foto2.jpeg" alt="Relicario grabado frontal">
-        <img src="foto3.jpeg" alt="Relicario cerrado caja">
-        <img src="foto4.jpeg" alt="Relicario mascotas">
+        <img src="foto1.jpeg" alt="Relicario interior con fotos" loading="lazy">
+        <img src="foto2.jpeg" alt="Relicario con grabado láser" loading="lazy">
+        <img src="foto3.jpeg" alt="Relicario cerrado caja premium" loading="lazy">
+        <img src="foto4.jpeg" alt="Relicario especial mascotas" loading="lazy">
       </div>
 
-      <div class="pricing">
-        <div class="old-price">Precio normal: $99.900</div>
-        <div class="new-price">
-          <span>DESDE</span> $54.900
-        </div>
+      <!-- Precio Destacado -->
+      <div class="pricing-box">
+        <div class="pricing-label">Modelos disponibles desde</div>
+        <div class="pricing-value">$54.900</div>
       </div>
 
-      <div class="features">
-        <div class="feature-item">
-          <div class="feature-icon">🛡️</div>
-          <div class="feature-text">
-            <strong>Acero inoxidable garantizado</strong>
-            <p>No se oxida, no pierde color y es hipoalergénico.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">✍🏼</div>
-          <div class="feature-text">
-            <strong>Grabado láser imborrable</strong>
-            <p>Personalízalo con fechas, nombres o tu frase favorita.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">📸</div>
-          <div class="feature-text">
-            <strong>Fotografías a la medida</strong>
-            <p>Imprimimos, cortamos y ensamblamos tus fotos con precisión.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">🎁</div>
-          <div class="feature-text">
-            <strong>Listo para regalar</strong>
-            <p>Empaque premium cuidado en cada detalle.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-container">
-        
-        <!-- Flechas animadas apuntando hacia abajo -->
-        <div class="arrows-down">
-          <span>↓</span>
-          <span>↓</span>
-          <span>↓</span>
-        </div>
-
-        <!-- El evento onclick asegura que tu Píxel registre el "Lead" -->
-        <a href="https://wa.me/573134275032?text=Hola%20Montya%20%E2%9C%A8%20Vi%20los%20relicarios%20y%20quiero%20elegir%20mi%20modelo" class="cta-button" target="_blank" rel="noopener" onclick="fbq('track', 'Lead');">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-          </svg>
-          ¡LO QUIERO AHORA!
+      <!-- CTA Principal -->
+      <div class="cta-main-wrap">
+        <a href="https://wa.me/573237140289?text=Hola%20Montya%20%E2%9C%A8%20Vi%20los%20relicarios%20desde%20%2454.900%20y%20quiero%20personalizar%20el%20mío" class="cta-btn" target="_blank" rel="noopener" onclick="fbq('track', 'Lead');">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+          💚 PERSONALIZA AQUÍ EL TUYO
         </a>
-        <div class="guarantee">
-          🔒 Compra 100% segura. Asesoría en WhatsApp.
-        </div>
+        <div class="cta-subtext">Te asesoramos paso a paso por WhatsApp.</div>
       </div>
+
+      <!-- Sección Tu recuerdo convertido en joya -->
+      <section class="section-block">
+        <h2>Tu recuerdo, convertido en una joya</h2>
+        <p>Cada pieza se elabora a mano cuidando cada detalle para inmortalizar lo que más te importa.</p>
+        <img src="foto3.jpeg" alt="Detalle del relicario Montya" class="single-img" loading="lazy">
+      </section>
+
+      <!-- Sección ¿Qué incluye? -->
+      <section class="section-block">
+        <h2>¿Qué incluye tu pedido?</h2>
+        <p>Todo listo para regalar o consentirte.</p>
+        <div class="includes-grid">
+          <div class="include-card">
+            <span>📿</span>
+            <strong>Relicario</strong>
+            <p>Diseño exclusivo en acero.</p>
+          </div>
+          <div class="include-card">
+            <span>🔗</span>
+            <strong>Cadena</strong>
+            <p>Incluida con la pieza.</p>
+          </div>
+          <div class="include-card">
+            <span>📸</span>
+            <strong>Fotos a medida</strong>
+            <p>Impresas y adaptadas.</p>
+          </div>
+          <div class="include-card">
+            <span>✍🏼</span>
+            <strong>Grabado láser</strong>
+            <p>Frases o fechas exactas.</p>
+          </div>
+          <div class="include-card">
+            <span>🎁</span>
+            <strong>Empaque premium</strong>
+            <p>Caja lista para obsequiar.</p>
+          </div>
+          <div class="include-card">
+            <span>🛡️</span>
+            <strong>Garantía</strong>
+            <p>Material inalterable.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Así personalizamos tu recuerdo -->
+      <section class="section-block">
+        <h2>Así transformamos tu foto</h2>
+        <p>Nos encargamos de todo el proceso técnico para que el resultado sea impecable.</p>
+        <img src="foto1.jpeg" alt="Proceso de personalización" class="single-img" loading="lazy">
+      </section>
+
+      <!-- Sección 4 Pasos -->
+      <section class="section-block">
+        <h2>Personalizar el tuyo es muy fácil</h2>
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <strong>Elige tu modelo</strong>
+              <p>Te mostramos el catálogo en WhatsApp.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <strong>Envíanos tus fotos</strong>
+              <p>Y el texto que deseas grabar por láser.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <strong>Nosotros lo creamos</strong>
+              <p>Armamos y empacamos tu joya con amor.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <strong>Recíbelo en casa</strong>
+              <p>Envíos seguros a toda Colombia.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Intermedio -->
+      <div class="cta-main-wrap" style="margin-top: 10px;">
+        <a href="https://wa.me/573237140289?text=Hola%20Montya%20%E2%9C%A8%20Quiero%20ver%20el%20catálogo%20de%20relicarios" class="cta-btn" target="_blank" rel="noopener" onclick="fbq('track', 'Lead');">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+          💚 PERSONALIZA AQUÍ EL TUYO
+        </a>
+      </div>
+
+      <!-- Testimonios Reales -->
+      <section class="section-block">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>Experiencias reales de quienes ya llevan sus recuerdos cerca.</p>
+        <img src="foto4.jpeg" alt="Testimonio de cliente satisfecho" class="testimonial-img" loading="lazy">
+      </section>
+
+      <!-- Preguntas Frecuentes -->
+      <section class="section-block">
+        <h2>Preguntas Frecuentes</h2>
+        
+        <div class="faq-item">
+          <strong>¿El material se oscurece o se oxida?</strong>
+          <p>No, trabajamos con acero inoxidable garantizado de alta calidad. Es resistente al agua y al uso diario.</p>
+        </div>
+
+        <div class="faq-item">
+          <strong>¿Cómo envío mis fotos y el texto a grabar?</strong>
+          <p>Al hacer clic en el botón de WhatsApp, nos escribes directamente y allí te guiaremos para recibirlas.</p>
+        </div>
+
+        <div class="faq-item">
+          <strong>¿Cuánto tarda el envío?</strong>
+          <p>Realizamos envíos seguros a toda Colombia. El tiempo habitual es de 2 a 4 días hábiles según tu ciudad.</p>
+        </div>
+
+        <div class="faq-item">
+          <strong>¿Las fotos ya vienen incluidas e instaladas?</strong>
+          <p>¡Sí! Nosotros imprimimos, cortamos a la medida exacta y colocamos tus fotos dentro del relicario.</p>
+        </div>
+      </section>
+
+      <!-- Cierre Emocional -->
+      <section class="emotional-close">
+        <h2>Hay personas que queremos llevar siempre con nosotros. ❤️</h2>
+        <p>Hazlo realidad hoy mismo con un relicario personalizado.</p>
+        <div style="padding: 0 20px;">
+          <a href="https://wa.me/573237140289?text=Hola%20Montya%20%E2%9C%A8%20Quiero%20personalizar%20el%20mío" class="cta-btn" target="_blank" rel="noopener" onclick="fbq('track', 'Lead');">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+            PERSONALIZA EL TUYO
+          </a>
+        </div>
+      </section>
+
     </main>
+
+    <!-- Barra Inferior Flotante Móvil -->
+    <div class="floating-bar">
+      <div class="floating-price">
+        <span>Desde</span>
+        $54.900
+      </div>
+      <a href="https://wa.me/573237140289?text=Hola%20Montya%20%E2%9C%A8%20Vi%20los%20relicarios%20desde%20%2454.900%20y%20quiero%20personalizar%20el%20mío" class="floating-btn" target="_blank" rel="noopener" onclick="fbq('track', 'Lead');">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+        PEDIR POR WHATSAPP
+      </a>
+    </div>
+
+    <footer>
+      MONTYA JEWELRY · Envíos seguros a toda Colombia
+    </footer>
 
   </div>
 </body>
